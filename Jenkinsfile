@@ -44,7 +44,11 @@ pipeline {
     // stage docker compose
         stage('Deploy with Docker Compose') {
             steps {
-                bat "docker-compose up -d --build"
+                bat """ 
+                set BUILD_NUMBER=${BUILD_NUMBER}
+                docker-compose up -d --build
+                
+                """
             }
         }
     }
