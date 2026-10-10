@@ -1,5 +1,5 @@
 pipeline {
-//fichier 
+
     // agent any
 
     agent {
